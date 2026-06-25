@@ -169,5 +169,24 @@
 
 <script>
     function switchLanguage(lang) {
-        // Disattiva tutti i blocchi di testo
-        document.querySelectorAll('.
+        // 1. Nascondi tutti i blocchi di testo
+        document.querySelectorAll('.lang-content').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        // 2. Rimuovi lo stato attivo da tutti i bottoni
+        document.querySelectorAll('.lang-btn').forEach(el => {
+            el.classList.remove('active');
+        });
+        
+        // 3. Mostra il blocco della lingua selezionata
+        document.getElementById('content-' + lang).classList.add('active');
+        
+        // 4. Trova il bottone cliccato in base alla lingua e attiva lo stile
+        if (lang === 'it') {
+            document.querySelectorAll('.lang-btn')[0].classList.add('active');
+        } else {
+            document.querySelectorAll('.lang-btn')[1].classList.add('active');
+        }
+    }
+</script>
