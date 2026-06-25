@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informativa sulla Privacy - RespirAzione 4-7-8</title>
+    <title>Privacy Policy - RespirAzione 4-7-8</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -21,6 +21,32 @@
             border-radius: 16px;
             box-shadow: 0 4px 20px rgba(178, 223, 219, 0.2);
             border: 1px solid #E0F2F1;
+            position: relative;
+        }
+        .lang-switcher {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #E0F2F1;
+            border: 1px solid #B2DFDB;
+            color: #00796B;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .lang-btn.active {
+            background-color: #00796B;
+            color: #ffffff;
+            border-color: #00796B;
+        }
+        .lang-btn:hover {
+            opacity: 0.9;
         }
         h1 {
             color: #00796B;
@@ -49,48 +75,99 @@
             border-top: 1px solid #E2E8F0;
             padding-top: 20px;
         }
+        /* Classe per nascondere la lingua non attiva */
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Informativa sulla Privacy</h1>
-    <p><strong>Ultimo aggiornamento:</strong> 25 Giugno 2026</p>
-    <p>L'applicazione <strong>RespirAzione 4-7-8</strong> è sviluppata e gestita da <strong>One Health & Beyond</strong>. La presente informativa descrive le modalità di gestione dei dati personali in relazione all'uso dell'applicazione.</p>
+    
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('it')">Italiano</button>
+        <button class="lang-btn" onclick="switchLanguage('en')">English</button>
+    </div>
 
-    <h2>1. Titolare del Trattamento dei Dati</h2>
-    <p>Il Titolare del trattamento dei dati è: <br>
-    <strong>One Health & Beyond</strong><br>
-    Per qualsiasi domanda o richiesta relativa alla privacy, è possibile contattarci all'indirizzo email di supporto fornito sulla scheda di Google Play.</p>
+    <div id="content-it" class="lang-content active">
+        <h1>Informativa sulla Privacy</h1>
+        <p><strong>Ultimo aggiornamento:</strong> 25 Giugno 2026</p>
+        <p>L'applicazione <strong>RespirAzione 4-7-8</strong> è sviluppata e gestita da <strong>One Health & Beyond</strong>. La presente informativa descrive le modalità di gestione dei dati personali in relazione all'uso dell'applicazione.</p>
 
-    <h2>2. Tipologie di Dati Raccolti</h2>
-    <p>La nostra applicazione è progettata per rispettare la massima riservatezza degli utenti (Quiet Design):</p>
-    <ul>
-        <li><strong>Dati di utilizzo dell'app:</strong> L'applicazione non raccoglie né trasmette dati personali identificativi (come nome, cognome, indirizzo email o posizione) sui nostri server.</li>
-        <li><strong>Acquisti In-App e Abbonamenti:</strong> Per la gestione degli abbonamenti Premium, l'app si avvale del servizio terzo <strong>RevenueCat</strong> e della piattaforma <strong>Google Play Commerce</strong>. Queste piattaforme gestiscono le transazioni in modo sicuro. Il Titolare non ha accesso ai dati della tua carta di credito o informazioni finanziarie personali; riceviamo esclusivamente ricevute anonime generate dal sistema per sbloccare i contenuti acquistati.</li>
-    </ul>
+        <h2>1. Titolare del Trattamento dei Dati</h2>
+        <p>Il Titolare del trattamento dei dati è: <br>
+        <strong>One Health & Beyond</strong><br>
+        Per qualsiasi domanda o richiesta relativa alla privacy, è possibile contattarci all'indirizzo email di supporto fornito sulla scheda di Google Play.</p>
 
-    <h2>3. Servizi di Terze Parti</h2>
-    <p>L'applicazione integra servizi di terze parti per garantire il corretto funzionamento tecnico e commerciale:</p>
-    <ul>
-        <li><strong>Google Play Services / Google Play Commerce:</strong> Utilizzato per la distribuzione dell'applicazione e l'elaborazione dei pagamenti nativi Android. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</li>
-        <li><strong>RevenueCat:</strong> Utilizzato per verificare lo stato dell'abbonamento e validare le ricevute d'acquisto. I dati scambiati sono pseudonimizzati e strettamente limitati alla gestione della transazione. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy di RevenueCat</a>.</li>
-    </ul>
+        <h2>2. Tipologie di Dati Raccolti</h2>
+        <p>La nostra applicazione è progettata per rispettare la massima riservatezza degli utenti (filosofia Quiet Design):</p>
+        <ul>
+            <li><strong>Dati di utilizzo dell'app:</strong> L'applicazione non raccoglie né trasmette dati personali identificativi (come nome, cognome, indirizzo email o posizione) sui nostri server.</li>
+            <li><strong>Acquisti In-App e Abbonamenti:</strong> Per la gestione degli abbonamenti Premium, l'app si avvale del servizio terzo <strong>RevenueCat</strong> e della piattaforma <strong>Google Play Commerce</strong>. Queste piattaforme gestiscono le transazioni in modo sicuro. Il Titolare non ha accesso ai dati della tua carta di credito o informazioni finanziarie personali; riceviamo esclusivamente ricevute anonime generate dal sistema per sbloccare i contenuti acquistati.</li>
+        </ul>
 
-    <h2>4. Conservazione e Sicurezza dei Dati</h2>
-    <p>Tutti i progressi o le impostazioni locali dell'applicazione rimangono memorizzati esclusivamente all'interno del dispositivo dell'utente e possono essere cancellati in qualsiasi momento disinstallando l'applicazione o svuotando la cache del telefono.</p>
+        <h2>3. Servizi di Terze Parti</h2>
+        <p>L'applicazione integra servizi di terze parti per garantire il corretto funzionamento tecnico e commerciale:</p>
+        <ul>
+            <li><strong>Google Play Services / Google Play Commerce:</strong> Utilizzato per la distribuzione dell'applicazione e l'elaborazione dei pagamenti nativi Android. <a href="https://policies.google.com/privacy" target="_blank">Privacy Policy di Google</a>.</li>
+            <li><strong>RevenueCat:</strong> Utilizzato per verificare lo stato dell'abbonamento e validare le ricevute d'acquisto. I dati scambiati sono pseudonimizzati e strettamente limitati alla gestione della transazione. <a href="https://www.revenuecat.com/privacy" target="_blank">Privacy Policy di RevenueCat</a>.</li>
+        </ul>
 
-    <h2>5. Diritti degli Utenti (GDPR)</h2>
-    <p>In conformità con il Regolamento Europeo (GDPR), gli utenti hanno il diritto di accedere ai propri dati o richiederne la cancellazione. Poiché l'app non raccoglie dati identificativi su server remoti, non siamo in possesso di database utente da poter modificare o cancellare.</p>
+        <h2>4. Conservazione e Sicurezza dei Dati</h2>
+        <p>Tutti i progressi o le impostazioni locali dell'applicazione rimangono memorizzati esclusivamente all'interno del dispositivo dell'utente e possono essere cancellati in qualsiasi momento disinstallando l'applicazione o svuotando la cache del telefono.</p>
 
-    <h2>6. Modifiche alla presente Privacy Policy</h2>
-    <p>Il Titolare si riserva il diritto di apportare modifiche alla presente informativa in qualsiasi momento. Si consiglia di consultare periodicamente questa pagina per verificare eventuali aggiornamenti.</p>
+        <h2>5. Diritti degli Utenti (GDPR)</h2>
+        <p>In conformità con il Regolamento Europeo (GDPR), gli utenti hanno il diritto di accedere ai propri dati o richiederne la cancellazione. Poiché l'app non raccoglie dati identificativi su server remoti, non siamo in possesso di database utente da poter modificare o cancellare.</p>
+
+        <h2>6. Modifiche alla presente Privacy Policy</h2>
+        <p>Il Titolare si riserva il diritto di apportare modifiche alla presente informativa in qualsiasi momento. Si consiglia di consultare periodicamente questa pagina per verificare eventuali aggiornamenti.</p>
+    </div>
+
+    <div id="content-en" class="lang-content">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> June 25, 2026</p>
+        <p>The <strong>RespirAzione 4-7-8</strong> application is developed and managed by <strong>One Health & Beyond</strong>. This privacy policy describes how personal data is handled in relation to your use of the application.</p>
+
+        <h2>1. Data Controller</h2>
+        <p>The Data Controller is:<br>
+        <strong>One Health & Beyond</strong><br>
+        For any questions or requests regarding your privacy, you can contact us via the support email address provided on our Google Play Store listing.</p>
+
+        <h2>2. Types of Data Collected</h2>
+        <p>Our application is designed to respect user privacy at its core (Quiet Design philosophy):</p>
+        <ul>
+            <li><strong>App Usage Data:</strong> The application does not collect, store, or transmit any personally identifiable information (such as your name, email address, phone number, or location) to our servers.</li>
+            <li><strong>In-App Purchases and Subscriptions:</strong> To process and manage Premium subscriptions, the app uses trusted third-party services: <strong>RevenueCat</strong> and <strong>Google Play Commerce</strong>. These platforms process your transactions securely. The Data Controller does not have access to your credit card details or personal financial information; we only receive anonymous cryptographic receipts generated by the system to unlock your Premium features.</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>The application integrates third-party services to ensure correct technical and commercial functionality:</p>
+        <ul>
+            <li><strong>Google Play Services / Google Play Commerce:</strong> Used for app distribution and processing native Android payments. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>.</li>
+            <li><strong>RevenueCat:</strong> Used to track subscription status and validate purchase receipts. The shared data is pseudonimised and strictly limited to transaction verification. <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</li>
+        </ul>
+
+        <h2>4. Data Retention and Security</h2>
+        <p>All your local settings, preferences, or configuration progress remain stored exclusively on your device. This data can be deleted at any time by uninstalling the app or clearing the app cache through your device settings.</p>
+
+        <h2>5. User Rights (GDPR / CCPA)</h2>
+        <p>In accordance with the General Data Protection Regulation (GDPR) and other global privacy laws, users have the right to access or request the deletion of their data. Since the app does not collect or store any personal data on remote servers, we do not maintain a user database to modify or delete.</p>
+
+        <h2>6. Changes to this Privacy Policy</h2>
+        <p>The Data Controller reserves the right to make changes to this privacy policy at any time. We encourage users to check this page periodically for any updates.</p>
+    </div>
 
     <div class="footer">
-        &copy; 2026 One Health & Beyond. Tutti i diritti riservati.<br>
-        Sviluppato in conformità con le linee guida per gli sviluppatori di Google Play.
+        &copy; 2026 One Health & Beyond. All rights reserved.<br>
+        Developed in compliance with the Google Play Developer Distribution Agreement.
     </div>
 </div>
 
-</body>
-</html>
+<script>
+    function switchLanguage(lang) {
+        // Disattiva tutti i blocchi di testo
+        document.querySelectorAll('.
